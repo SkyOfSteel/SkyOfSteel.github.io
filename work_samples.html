@@ -11,19 +11,54 @@
         <h1>Ivan Zots</h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Profile</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="work_samples.html">Work Samples</a></li>
                 <li><a href="education.html">Education & Acknowledgments</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    
+    <div class="content">
         <h2>Work Samples</h2>
-        <p>Examples of projects and achievements.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Ivan Zots</p>
-    </footer>
+
+        <h3>1. Custom VPN on an EC2 Server in AWS</h3>
+        <p>
+            To demonstrate my knowledge of AWS, I created a custom VPN hosted on an EC2 server and published the instructions to do so in my GitHub repository.
+        </p>
+        <p>
+            The steps included spinning up a Ubuntu instance, allowing SSH connections over port 22 in the instance's Security Group, and creating a pair of security keys for the SSH login.
+        </p>
+        <p>
+            Then, I configured Security Groups to add an inbound rule to allow traffic from UDP port 1194.
+        </p>
+        <p>
+            In the SSH terminal, I ran the following commands from the Readme in the openvpn-install repository:
+        </p>
+        <pre>
+            sudo curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+            sudo chmod +x openvpn-install.sh
+            sudo ./openvpn-install.sh
+        </pre>
+        <p>
+            After the installation was complete, an .OVPN file was created in the current EC2 directory. To use the VPN, I imported the .OVPN file into OpenVPN and connected to the server.
+        </p>
+
+        <h3>2. Advanced Linux Course at George Brown College</h3>
+        <ul>
+            <li>Explored Linux essentials, including user and group creation, permission management, bash scripting, Filesystem Hierarchy Standard, archiving, compression, network configuration, and more.</li>
+            <li>Completed labs and challenges on the topics of user management, bash scripting, log files archiving, pipes, redirection, and REGEX.</li>
+            <li>Excelled at quizzes and exams on system and user security, data storage, hardware components, file/folder ownership, and other fundamental Linux concepts.</li>
+        </ul>
+
+        <h3>3. Azure Administration Course at George Brown College</h3>
+        <ul>
+            <li>Created a management group with multiple subscriptions for different departments to ensure billing and access control boundaries within the organization.</li>
+            <li>Deployed a resource group with Azure VMs and associated resources in the Azure environment.</li>
+            <li>Calculated the cost of cloud resources using Azure Pricing Calculator and compared it to the cost of on-premises deployment with the Total Cost of Ownership Calculator.</li>
+            <li>Reviewed ARM templates to create a company Azure Storage account, VMs, and Managed Disks via Azure Bicep and Azure Cloud Shell; deployed an nginx server on the VM to host a custom website.</li>
+        </ul>
+    </div>
 </body>
 </html>
